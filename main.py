@@ -1,10 +1,16 @@
+import os
+
 import pandas as pd
 import requests
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
 
 app = FastAPI()
+
+load_dotenv()
+HF_TOKEN = os.getenv("HF_TOKEN")
 
 
 app.add_middleware(
@@ -20,8 +26,8 @@ app.add_middleware(
 
 # Hugging Face API details
 HF_API_URL = "https://router.huggingface.co/v1/chat/completions"
-HF_API_KEY = "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"  # Replace with your actual token
-HEADERS = {"Authorization": f"Bearer {HF_API_KEY}"}
+ # Replace with your actual token
+HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
 
 # Map apparel types to CSV files
 CSV_MAP = {
