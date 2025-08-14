@@ -20,7 +20,7 @@ app.add_middleware(
 
 # Hugging Face API details
 HF_API_URL = "https://router.huggingface.co/v1/chat/completions"
-HF_API_KEY = "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"  # Replace with your actual token
+HF_API_KEY = "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"  # Replace with your actual token
 HEADERS = {"Authorization": f"Bearer {HF_API_KEY}"}
 
 # Map apparel types to CSV files
