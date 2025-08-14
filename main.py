@@ -12,10 +12,10 @@ HEADERS = {"Authorization": f"Bearer {HF_API_KEY}"}
 
 # Map apparel types to CSV files
 CSV_MAP = {
-    "shirt": "shirts.csv",
-    "pants": "pants.csv",
-    "suit": "suits.csv",
-    "tshirt": "tshirts.csv"
+    "shirt": "data/shirts.csv",
+    "pants": "data/pants.csv",
+    "suit": "data/suits.csv",
+    "tshirt": "data/tshirts.csv"
 }
 
 def get_attributes_from_csv(apparel_type, product_id=None):
